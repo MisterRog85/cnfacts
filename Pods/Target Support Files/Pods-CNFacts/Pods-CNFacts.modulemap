@@ -1,0 +1,6 @@
+framework module Pods_CNFacts {
+  umbrella header "Pods-CNFacts-umbrella.h"
+
+  export *
+  module * { export * }
+}
