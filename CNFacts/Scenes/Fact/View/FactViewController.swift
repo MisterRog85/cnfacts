@@ -12,7 +12,6 @@ import CNFactsBusinessLogic
 class FactViewController: UIViewController {
     
     var interactor: FactInteractorInput?
-    var fact: FactViewModelProtocol?
     
     @IBOutlet weak var factLabel: UILabel!
     
@@ -37,8 +36,7 @@ class FactViewController: UIViewController {
 }
 
 extension FactViewController: FactPresenterOutput {
-    func displayFact(_ fact: FactViewModelProtocol) {
-        self.fact = fact
-        self.factLabel.text = fact.fact
+    func displayFact(_ text: String) {
+        self.factLabel.text = text
     }
 }

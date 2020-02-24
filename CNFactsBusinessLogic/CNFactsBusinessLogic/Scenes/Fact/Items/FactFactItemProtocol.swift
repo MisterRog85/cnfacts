@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol FactFactItemProtocol {
-    var fact: String? {get}
+    var fact: String {get}
 }

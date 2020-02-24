@@ -22,6 +22,7 @@ class FactInteractor {
 
 extension FactInteractor: FactInteractorInput{
     func retrieveFact() {
+        output.setPlaceHolder()
         output.startLoading()
         repository.getFact()
     }
@@ -32,10 +33,11 @@ extension FactInteractor: GetFactRepositoryOutput {
         var tmpFact: FactFactItemProtocol
         if let item = fact.fact {
             tmpFact = FactFactItem(fact: item)
+            self.output.setFact(tmpFact)
         } else {
-            tmpFact = FactFactItem(fact: "Pas encore de fact !")
+            self.output.setPlaceHolder()
         }
-        self.output.setFact(tmpFact)
+        
         self.output.stopLoading()
     }
 }

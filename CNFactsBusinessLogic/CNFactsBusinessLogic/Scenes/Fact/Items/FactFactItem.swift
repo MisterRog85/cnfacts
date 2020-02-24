@@ -9,5 +9,5 @@
 import Foundation
 
 struct FactFactItem: FactFactItemProtocol {
-    var fact: String?
+    var fact: String
 }

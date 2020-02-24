@@ -15,13 +15,11 @@ class FactPresenter {
 
 extension FactPresenter: FactInteractorOutput {
     func setFact(_ fact: FactFactItemProtocol) {
-        var viewModel: FactViewModelProtocol {
-            guard let fact = fact.fact else {
-                return FactViewModel(fact: "Pour obtenir un fact touchez Chuck !")
-            }
-            return FactViewModel(fact: fact)
-        }
-        output?.displayFact(viewModel)
+        output?.displayFact(fact.fact)
+    }
+    
+    func setPlaceHolder() {
+        output?.displayFact("Pour obtenir un fact touchez Chuck !")
     }
     
     func startLoading() {

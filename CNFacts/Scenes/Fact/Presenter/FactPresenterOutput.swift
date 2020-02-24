@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol FactPresenterOutput: class {
-    func displayFact(_ fact: FactViewModelProtocol)
+    func displayFact(_ text: String)
 }

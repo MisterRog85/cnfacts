@@ -10,6 +10,7 @@ import Foundation
 
 public protocol FactInteractorOutput {
     func setFact(_ fact: FactFactItemProtocol)
+    func setPlaceHolder()
     func startLoading()
     func stopLoading()
 }
